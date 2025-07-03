@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - FLEESO</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import - Inter is a good general-purpose font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
+
+    <!-- Main Container for Sign Up Form -->
+    <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-4xl">
+
+        <!-- Left Section: Promotional Content (Blue Background) -->
+        <div class="lg:w-2/5 bg-blue-700 text-white p-8 sm:p-10 flex flex-col justify-between rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none">
+            <div>
+                <h2 class="text-3xl font-bold mb-8">FLEESO</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold mb-4">Start your journey with us.</h3>
+                <p class="text-base sm:text-lg opacity-90 leading-relaxed mb-8">
+                    Discover the world's best community of freelancers and business owners.
+                </p>
+            </div>
+            <div class="mt-auto">
+                <p class="text-lg font-medium italic mb-4">
+                    "Simply unbelievable! I am really satisfied with my projects and business. This is absolutely wonderful!"
+                </p>
+                <div class="flex items-center">
+                    <!-- Placeholder image for profile picture -->
+                    <img
+                        src="https://placehold.co/60x60/ffffff/000000?text=F"
+                        alt="Profile Picture"
+                        class="w-12 h-12 rounded-full border-2 border-white mr-3"
+                        onerror="this.onerror=null;this.src='https://placehold.co/60x60/cccccc/333333?text=Error';"
+                    >
+                    <div>
+                        <p class="font-semibold text-lg">Flora</p>
+                        <p class="text-sm opacity-80">Developer</p>
+                    </div>
+                </div>
+                <div class="flex justify-center lg:justify-start mt-6 space-x-2">
+                    <div class="w-2 h-2 bg-white rounded-full opacity-50"></div>
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                    <div class="w-2 h-2 bg-white rounded-full opacity-50"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section: Sign Up Form -->
+        <div class="lg:w-3/5 p-8 sm:p-10 lg:p-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Sign up</h2>
+            <p class="text-gray-600 mb-8">
+                Have an account? <a href="#" class="text-blue-600 hover:underline font-medium">Sign in</a>
+            </p>
+
+            <form>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-semibold mb-2">Looking for?</label>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="looking_for" value="projects" class="form-radio text-blue-600 h-5 w-5 border-gray-300 rounded-full" checked>
+                            <span class="ml-2 text-gray-700 font-medium">Projects</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="looking_for" value="designs" class="form-radio text-blue-600 h-5 w-5 border-gray-300 rounded-full">
+                            <span class="ml-2 text-gray-700 font-medium">Designs</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="abc@gmail.com"
+                        required
+                    >
+                </div>
+
+                <div class="mb-6">
+                    <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="••••••••"
+                        required
+                    >
+                </div>
+
+                <div class="mb-6">
+                    <label for="confirm-password" class="block text-gray-700 text-sm font-semibold mb-2">Enter Password</label>
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="••••••••"
+                        required
+                    >
+                </div>
+
+                <div class="mb-8">
+                    <label for="skills" class="block text-gray-700 text-sm font-semibold mb-2">Select Skills (optional)</label>
+                    <input
+                        type="text"
+                        id="skills"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Type to search"
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                >
+                    Create account
+                </button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
